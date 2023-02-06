@@ -1,8 +1,16 @@
 from module1 import *
 
+
+for x in range(0,5,1)
+print (x,end=", ")
+
 ikood="" 
+arvud=[]
+ikoodid=[] 
+
 while True:
     ikood=input("Sisesta isikukood -> ")
+    if ikood=="0":break
     if pikkus(ikood)==False:
         print("Liiga pikk või lühike isikukood")
     else:
@@ -19,3 +27,13 @@ while True:
                     print("viga")
                 else:
                     print(lause(ikood))
+                    if kontrollnr(ikood)==int(ikood[-1]):
+                        print("OK")
+                        ikoodid.append(ikood)
+                    else:
+                        print("!!!")
+print()
+ikoodid=naised_mehed(ikoodid)
+print(ikoodid) 
+arvud=arvud_sorted(arvud) 
+print(arvud) 
